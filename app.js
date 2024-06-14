@@ -8,5 +8,5 @@ buttonNode.addEventListener('click', (e) => {
     imgURL = `<img src="${inputNode.value}">`
     console.log(imgURL);
     divNode.innerHTML += imgURL;
-    inputNode.value = ' ';
+    inputNode.value = '';
 });
