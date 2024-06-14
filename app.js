@@ -6,10 +6,17 @@ const divNode = document.querySelector('div');
 
 buttonNode.addEventListener('click', (e) => {
     e.preventDefault();
-    const imgURL = inputNode.value;
-    agregarImagen(imgURL);
-    actualizarLocalStorage();
-    inputNode.value = '';
+
+    if (inputNode.value === "" || inputNode.value === " ") {
+        alert('Ingrese una URL válida');
+    }
+
+    else{
+        const imgURL = inputNode.value;
+        agregarImagen(imgURL);
+        actualizarLocalStorage();
+        inputNode.value = '';
+    }
 });
 
 divNode.addEventListener('click', (e) => {
