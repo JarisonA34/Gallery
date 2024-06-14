@@ -6,8 +6,9 @@ const divNode = document.querySelector('div');
 
 buttonNode.addEventListener('click', (e) => {
     e.preventDefault();
-    if (inputNode.value === "" || inputNode.value === " ") {
+    if (inputNode.value.trim() === '') {
         alert('Ingrese una URL válida');
+        inputNode.value = '';
     }
 
     else{
