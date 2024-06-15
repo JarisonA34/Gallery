@@ -8,17 +8,16 @@ buttonNode.addEventListener('click', (e) => {
     if (inputNode.value.trim() === '') {
         alert('Ingrese una URL válida');
         inputNode.value = '';
+        return;
     }
 
-    else{
-        const imgURL = inputNode.value;
-        agregarImagen(imgURL);
-        actualizarLocalStorage();
-        inputNode.value = '';
-    }
+    const imgURL = inputNode.value;
+    agregarImagen(imgURL);
+    actualizarLocalStorage();
+    inputNode.value = '';
 });
 
-divNode.addEventListener('click', (e) => {
+divNode.addEventListener('dblclick', (e) => {
     if (e.target.tagName === 'IMG') {
         e.target.remove();
         actualizarLocalStorage();
