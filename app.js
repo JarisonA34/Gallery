@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', cargarImagenes);
-
 const inputNode = document.querySelector('input');
 const buttonNode = document.querySelector('button');
 const divNode = document.querySelector('div');
